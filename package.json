@@ -1,0 +1,23 @@
+{
+  "name": "ranker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:dev": "webpack --mode development -w",
+    "server:dev": "nodemon server/index.js",
+    "build": "webpack --mode production",
+    "start": "node server/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/7socks/ranker.git"
+  },
+  "author": "7socks",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/7socks/ranker/issues"
+  },
+  "homepage": "https://github.com/7socks/ranker#readme"
+}
