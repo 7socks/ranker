@@ -19,5 +19,18 @@
   "bugs": {
     "url": "https://github.com/7socks/ranker/issues"
   },
-  "homepage": "https://github.com/7socks/ranker#readme"
+  "homepage": "https://github.com/7socks/ranker#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.18.0",
+    "@babel/preset-env": "^7.18.0",
+    "@babel/preset-react": "^7.17.12",
+    "babel-loader": "^8.2.5",
+    "webpack": "^5.72.1",
+    "webpack-cli": "^4.9.2"
+  }
 }
