@@ -51,7 +51,7 @@ class Sorter extends React.Component {
         item1: block1[0],
         item2: block2[0]
       };
-    } else if (this.state.blocks[1] === this.state.list.length - 1) {
+    } else if (this.state.blocks[1] >= this.state.list.length - 2) {
       console.log('option 2')
       list.splice(this.state.blocks[0], 2, merged);
       newState = {
