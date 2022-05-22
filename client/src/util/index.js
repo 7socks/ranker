@@ -8,7 +8,7 @@ const parseList = (str) => {
 
   for (var i = 0; i < lines.length; i++) {
     var item = new Item(lines[i]);
-    items.push(item);
+    items.push([item]);
   }
 
   return items;

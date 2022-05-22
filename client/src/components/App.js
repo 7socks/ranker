@@ -3,6 +3,7 @@ import { parseList } from '../util/index.js';
 
 import ListInput from './ListInput.js';
 import Sorter from './Sorter.js';
+import ResultPage from './ResultPage.js';
 
 class App extends React.Component {
   constructor(props) {
@@ -10,7 +11,8 @@ class App extends React.Component {
 
     this.state = {
       view: 'input',
-      list: []
+      list: [],
+      ranked: []
     };
 
     this.startSort = this.startSort.bind(this);
@@ -19,8 +21,15 @@ class App extends React.Component {
   startSort(list) {
     this.setState({
       view: 'sort',
-      list: list
-    })
+      list: parseList(list)
+    });
+  }
+
+  endSort(list) {
+    this.setState({
+      view: 'results',
+      ranked: list
+    });
   }
 
   render() {
@@ -30,7 +39,11 @@ class App extends React.Component {
       );
     } else if (this.state.view === 'sort') {
       return (
-        <Sorter list={this.state.list}/>
+        <Sorter list={this.state.list} finish={this.endSort}/>
+      );
+    } else if (this.state.view === 'results') {
+      return (
+        <ResultPage list={this.state.ranked}/>
       );
     }
   }
