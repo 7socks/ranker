@@ -17,8 +17,8 @@ class Sorter extends React.Component {
     this.select = this.select.bind(this);
   }
 
-  select(e) {
-    let item = this.state[e.target.id];
+  select(selection) {
+    let item = this.state[selection];
     let merged = this.state.merged;
     let list = this.state.list;
     merged.push(item);
@@ -28,7 +28,7 @@ class Sorter extends React.Component {
 
     let newState = {};
     if (block1.length + block2.length > 0) {
-      if (e.target.id === 'item1') {
+      if (selection === 'item1') {
         block1.splice(block1.indexOf(this.state.item1), 1);
       } else {
         block2.splice(block1.indexOf(this.state.item2), 1);
@@ -38,7 +38,7 @@ class Sorter extends React.Component {
         list: list,
         merged: merged,
         item1: block1[0],
-        item2: block1[0]
+        item2: block2[0]
       };
     } else if (this.state.blocks[1] === this.state.list.length) {
       list.splice(this.state.blocks[0], 2, merged);

@@ -16,6 +16,7 @@ class App extends React.Component {
     };
 
     this.startSort = this.startSort.bind(this);
+    this.endSort = this.endSort.bind(this);
   }
 
   startSort(list) {
