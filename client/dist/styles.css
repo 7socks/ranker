@@ -92,3 +92,18 @@ button {
 }
 
 /*** Results Page ***/
+
+.result-container ol {
+  margin: 1.5em 0;
+  min-width: 20em;
+  max-height: 25em;
+  overflow-y: scroll;
+}
+
+.result-container li {
+  margin: .3em 0;
+}
+
+.result-container button {
+  margin-top: 1em;
+}

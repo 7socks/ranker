@@ -17,6 +17,7 @@ class App extends React.Component {
 
     this.startSort = this.startSort.bind(this);
     this.endSort = this.endSort.bind(this);
+    this.restart = this.restart.bind(this);
   }
 
   startSort(list) {
@@ -36,6 +37,15 @@ class App extends React.Component {
     });
   }
 
+  restart(e) {
+    e.preventDefault();
+    this.setState({
+      view: 'input',
+      list: [],
+      ranked: []
+    });
+  }
+
   render() {
     if (this.state.view === 'input') {
       return (
@@ -47,7 +57,7 @@ class App extends React.Component {
       );
     } else if (this.state.view === 'results') {
       return (
-        <ResultPage list={this.state.ranked}/>
+        <ResultPage list={this.state.ranked} restart={this.restart}/>
       );
     }
   }
