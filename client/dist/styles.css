@@ -25,10 +25,17 @@ button {
   padding: .3em .5em;
 }
 
-button:hover {
+button:hover:enabled {
   background: rgb(53, 53, 140);
   color: white;
 }
+
+button:disabled {
+  border-color: gray;
+  color: gray;
+}
+
+
 
 /*** Page Container ***/
 .container {
