@@ -35,8 +35,6 @@ button:disabled {
   color: gray;
 }
 
-
-
 /*** Page Container ***/
 .container {
   background-color: white;
@@ -61,5 +59,36 @@ button {
 }
 
 /*** Sorting Page ***/
+.sorter-container h1 {
+  align-self: center;
+}
+
+.item-cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 1em;
+}
+
+.item-card {
+  width: 10em;
+  height: 10em;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  margin: 0 1em;
+  border: 3px solid rgb(53, 53, 140);
+  border-radius: 1em;
+  background-color:rgb(214, 214, 255);
+  font-size: 20px;
+  padding: .5em;
+  box-sizing: border-box;
+  overflow-wrap: anywhere;
+  cursor: default;
+}
+
+.item-card:hover {
+  background-color: rgb(161, 214, 255);
+}
 
 /*** Results Page ***/

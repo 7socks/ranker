@@ -79,8 +79,7 @@ class Sorter extends React.Component {
   render() {
     return (
       <div className="container sorter-container">
-        <h1>Sorting...</h1>
-        <p>Select the winner...</p>
+        <h1>Select the Winner</h1>
         <div className="item-cards">
           <ItemCard id="item1" item={this.state.item1} select={this.select}/>
           <ItemCard id="item2" item={this.state.item2} select={this.select}/>
