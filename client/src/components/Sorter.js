@@ -28,7 +28,7 @@ class Sorter extends React.Component {
     if (selection === 'item1') {
       block1.splice(block1.indexOf(this.state.item1), 1);
     } else {
-      block2.splice(block1.indexOf(this.state.item2), 1);
+      block2.splice(block2.indexOf(this.state.item2), 1);
     }
 
     if (block1.length === 0 && block2.length > 0) {
@@ -41,6 +41,7 @@ class Sorter extends React.Component {
 
     let newState = {};
     if (block1.length + block2.length > 0) {
+      console.log('Option 1')
       list.splice(this.state.blocks[0], 2, block1, block2);
       newState = {
         list: list,
@@ -49,6 +50,7 @@ class Sorter extends React.Component {
         item2: block2[0]
       };
     } else if (this.state.blocks[1] >= this.state.list.length - 2) {
+      console.log('Option 2')
       list.splice(this.state.blocks[0], 2, merged);
       newState = {
         list: list,
@@ -58,6 +60,7 @@ class Sorter extends React.Component {
         item2: list[1] ? list[1][0] : null
       };
     } else {
+      console.log('Option 3')
       list.splice(this.state.blocks[0], 2, merged);
       let newBlocks = [this.state.blocks[0] + 1, this.state.blocks[1] + 1];
       newState = {
@@ -68,6 +71,7 @@ class Sorter extends React.Component {
         item2: list[newBlocks[1]][0]
       };
     }
+    console.log('List', list);
 
     if (list.length === 1) {
       this.props.finish(list[0]);
