@@ -9,7 +9,7 @@ const ResultPage = ({list, restart}) => {
           return <li key={i}>{item.value}</li>
         })}
       </ol>
-      <button onClick={restart}>Start Again</button>
+      <button onClick={restart}>Start Over</button>
     </div>
   );
 }
