@@ -26,7 +26,7 @@ class ListInput extends React.Component {
   render() {
     return (
       <div className="container list-input-container">
-        <h1>Your Items</h1>
+        <h1>Your List</h1>
         <p>Write each item on a separate line</p>
         <textarea name="list" value={this.state.text} onChange={this.handleChange}/>
         <button onClick={this.handleClick}>Go</button>

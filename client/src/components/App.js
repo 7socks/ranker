@@ -20,10 +20,13 @@ class App extends React.Component {
   }
 
   startSort(list) {
-    this.setState({
-      view: 'sort',
-      list: parseList(list)
-    });
+    let parsed = parseList(list);
+    if (parsed.length > 1) {
+      this.setState({
+        view: 'sort',
+        list: parseList(list)
+      });
+    }
   }
 
   endSort(list) {
